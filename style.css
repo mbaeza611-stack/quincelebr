@@ -788,3 +788,60 @@ section{
     color:#d8d8d8;
     line-height:1.8;
 }
+/*=========================
+   RSVP
+=========================*/
+
+#rsvp{
+    background:#0b0b0b;
+    padding:120px 8%;
+    text-align:center;
+}
+
+.rsvp-text{
+    max-width:700px;
+    margin:30px auto 60px;
+    color:#d9d9d9;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.rsvp-card{
+    max-width:600px;
+    margin:auto;
+    padding:60px 40px;
+    border-radius:24px;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(212,175,55,.25);
+    backdrop-filter:blur(12px);
+}
+
+.rsvp-card h3{
+    font-family:'Cinzel',serif;
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.rsvp-card p{
+    color:#d9d9d9;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.rsvp-button{
+    display:inline-block;
+    padding:16px 42px;
+    border:2px solid #d4af37;
+    color:#d4af37;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.rsvp-button:hover{
+    background:#d4af37;
+    color:#111;
+    box-shadow:0 0 25px rgba(212,175,55,.35);
+}
