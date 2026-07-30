@@ -829,19 +829,6 @@ section{
     margin-bottom:35px;
 }
 
-.rsvp-button{
-    display:inline-block;
-    margin-top:15px;
-    padding:18px 48px;
-    border-radius:999px;
-    border:2px solid #d4af37;
-    color:#d4af37;
-    text-decoration:none;
-    font-weight:600;
-    letter-spacing:1px;
-    transition:.35s ease;
-}
-
 .rsvp-button:hover{
     background:#d4af37;
     color:#111;
@@ -854,4 +841,26 @@ section{
     color:#9d9d9d;
     font-size:.9rem;
     font-style:italic;
+}
+
+/* ADD THESE AT THE VERY END */
+
+.rsvp-divider{
+    width:80px;
+    height:2px;
+    background:#d4af37;
+    margin:35px auto;
+}
+
+.dress-reminder{
+    color:#cfcfcf;
+    line-height:1.8;
+    max-width:500px;
+    margin:auto;
+    font-size:.95rem;
+}
+
+.dress-reminder strong{
+    color:#d4af37;
+    letter-spacing:1px;
 }
