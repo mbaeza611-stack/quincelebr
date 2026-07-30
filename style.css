@@ -829,11 +829,17 @@ section{
     margin-bottom:35px;
 }
 
-.rsvp-button:hover{
-    background:#d4af37;
-    color:#111;
-    transform:translateY(-3px);
-    box-shadow:0 0 30px rgba(212,175,55,.35);
+.rsvp-button{
+    display:inline-block;
+    margin-top:20px;
+    padding:18px 48px;
+    border-radius:999px;
+    border:2px solid #d4af37;
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:.35s ease;
 }
 
 .rsvp-note{
