@@ -663,5 +663,69 @@ section{
 .timeline-content{
     padding:22px;
 }
+/* ===========================
+   EVENTS
+=========================== */
 
+#events{
+    background:#0b0b0b;
+    padding:120px 8%;
+}
+
+.events-intro{
+    max-width:700px;
+    margin:30px auto 70px;
+    text-align:center;
+    color:#d9d9d9;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.event-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.event-card{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:22px;
+    padding:45px 30px;
+    text-align:center;
+    transition:.35s ease;
+    backdrop-filter:blur(12px);
+}
+
+.event-card:hover{
+    transform:translateY(-10px);
+    border-color:#d4af37;
+    box-shadow:
+        0 0 30px rgba(212,175,55,.18),
+        0 20px 40px rgba(0,0,0,.45);
+}
+
+.event-icon{
+    font-size:2.8rem;
+    margin-bottom:20px;
+}
+
+.event-card h3{
+    font-family:'Cinzel', serif;
+    color:#fff;
+    font-size:1.6rem;
+    margin-bottom:10px;
+}
+
+.event-card h4{
+    color:#d4af37;
+    margin-bottom:15px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.event-card p{
+    color:#d8d8d8;
+    line-height:1.8;
+}
 
