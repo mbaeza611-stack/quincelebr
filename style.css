@@ -70,36 +70,64 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:22px 7%;
-    background:rgba(0,0,0,.45);
-    backdrop-filter:blur(12px);
-    z-index:500;
+
+    padding:18px 7%;
+
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(212,175,55,.18);
+
+    transition:.4s;
+    z-index:1000;
 }
 
 .logo{
     color:#d4af37;
-    font-size:2rem;
+    font-size:2.2rem;
     font-family:'Cinzel';
     font-weight:700;
+    letter-spacing:2px;
+    text-shadow:0 0 18px rgba(212,175,55,.25);
 }
 
 nav ul{
     display:flex;
-    gap:35px;
+    gap:40px;
     list-style:none;
 }
 
 nav li{
-    font-size:.95rem;
+    font-size:1rem;
     letter-spacing:1px;
 }
 
 nav a{
-    transition:.35s;
+    position:relative;
+    color:#ececec;
+    text-decoration:none;
+    padding:8px 2px;
+    transition:.35s ease;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#d4af37;
+    transition:.35s ease;
 }
 
 nav a:hover{
     color:#d4af37;
+}
+
+nav a:hover::after{
+    width:100%;
 }
 
 /* -----------------------------
@@ -115,8 +143,8 @@ nav a:hover{
         linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.82)),
         url("hero.jpg");
 
-    background-size:cover;
-    background-position:center center;
+    background-size:115%;
+    background-position:center top;
     background-repeat:no-repeat;
 
     display:flex;
@@ -129,6 +157,7 @@ nav a:hover{
     z-index:2;
     max-width:900px;
     padding:40px;
+    padding-top:90px;
 }
 
 .subtitle{
