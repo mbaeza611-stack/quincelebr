@@ -730,3 +730,61 @@ section{
     line-height:1.8;
 }
 
+/*=========================
+   DRESS CODE
+=========================*/
+
+#dress-code{
+    background:#080808;
+    padding:120px 8%;
+}
+
+.dress-intro{
+    max-width:750px;
+    margin:30px auto 70px;
+    text-align:center;
+    color:#d9d9d9;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.dress-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.dress-card{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:22px;
+    padding:45px 30px;
+    text-align:center;
+    backdrop-filter:blur(12px);
+    transition:.35s ease;
+}
+
+.dress-card:hover{
+    transform:translateY(-10px);
+    border-color:#d4af37;
+    box-shadow:
+        0 0 30px rgba(212,175,55,.18),
+        0 20px 40px rgba(0,0,0,.45);
+}
+
+.dress-icon{
+    font-size:2.8rem;
+    margin-bottom:20px;
+}
+
+.dress-card h3{
+    font-family:'Cinzel',serif;
+    color:#fff;
+    margin-bottom:15px;
+    font-size:1.6rem;
+}
+
+.dress-card p{
+    color:#d8d8d8;
+    line-height:1.8;
+}
