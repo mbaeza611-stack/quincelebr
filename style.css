@@ -155,9 +155,11 @@ nav a:hover::after{
 .hero-content{
     position:relative;
     z-index:2;
-    max-width:900px;
+    max-width:950px;
     padding:40px;
     padding-top:90px;
+
+    animation:heroFade 1.6s ease;
 }
 
 .subtitle{
@@ -189,48 +191,99 @@ nav a:hover::after{
 }
 
 .hero-xv{
-    font-family:'Cinzel', serif;
+
+    font-family:'Cinzel';
+    font-size:6.8rem;
     color:#d4af37;
-    font-size:6rem;
-    font-weight:700;
-    letter-spacing:8px;
+
     margin:15px 0;
+
+    text-shadow:
+        0 0 15px rgba(212,175,55,.45),
+        0 0 45px rgba(212,175,55,.15);
+
+    animation:glow 3s ease-in-out infinite alternate;
+
+}
+@keyframes glow{
+
+    from{
+        text-shadow:
+            0 0 10px rgba(212,175,55,.35),
+            0 0 25px rgba(212,175,55,.12);
+    }
+
+    to{
+        text-shadow:
+            0 0 20px rgba(212,175,55,.75),
+            0 0 60px rgba(212,175,55,.35);
+    }
+
 }
 
 .gold-divider{
-    width:140px;
+    width:170px;
     height:2px;
-    background:#d4af37;
     margin:30px auto;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        #f8e08e,
+        #d4af37,
+        transparent
+    );
 }
 .hero h1{
     font-family:'Cinzel', serif;
-    font-size:5.5rem;
+    font-size:6.2rem;
     font-weight:700;
-    letter-spacing:5px;
+    letter-spacing:8px;
+    line-height:1.05;
     color:#ffffff;
-    margin-bottom:10px;
     text-transform:uppercase;
+    margin-bottom:12px;
+
+    text-shadow:
+        0 8px 35px rgba(0,0,0,.55);
 }
 
 .date{
     font-size:1.15rem;
-    letter-spacing:3px;
+    letter-spacing:4px;
+    color:#f4f4f4;
     margin-bottom:45px;
 }
 
 .gold-button{
+
     display:inline-block;
-    padding:18px 42px;
-    background:#d4af37;
-    color:#111;
-    border:none;
+
+    padding:18px 46px;
+
     border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #c49a22,
+        #d4af37,
+        #f5d86d
+    );
+
+    color:#111;
+
+    font-weight:700;
+
     letter-spacing:1px;
-    transition:.35s ease;
-    box-shadow:0 10px 30px rgba(212,175,55,.30);
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    box-shadow:
+        0 15px 35px rgba(212,175,55,.28);
+
 }
 
 .gold-button:hover{
@@ -321,6 +374,44 @@ section{
     border-color:#d4af37;
 }
 
+/* ==========================
+   Hero Animation
+========================== */
+
+@keyframes heroFade{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:
+            0 0 10px rgba(212,175,55,.35),
+            0 0 25px rgba(212,175,55,.12);
+    }
+
+    to{
+        text-shadow:
+            0 0 20px rgba(212,175,55,.75),
+            0 0 60px rgba(212,175,55,.35);
+    }
+
+}
+
+/* -----------------------------
+   Footer
+------------------------------ */
+
 /* -----------------------------
  Footer
 ------------------------------*/
@@ -403,5 +494,22 @@ section{
 .gold-button{
     padding:15px 30px;
 }
+
+}
+/* ==========================
+   Hero Animation
+========================== */
+
+@keyframes heroFade{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
