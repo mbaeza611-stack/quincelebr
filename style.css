@@ -956,3 +956,53 @@ section{
     font-style:italic;
     line-height:1.8;
 }
+/*=========================
+   THANK YOU
+=========================*/
+
+#thank-you{
+    background:#050505;
+    padding:120px 8%;
+    text-align:center;
+}
+
+.thank-container{
+    max-width:700px;
+    margin:auto;
+}
+
+.thank-container h2{
+    font-family:'Cinzel',serif;
+    color:#d4af37;
+    font-size:3rem;
+    margin-bottom:30px;
+}
+
+.thank-container p{
+    color:#d8d8d8;
+    line-height:1.9;
+    margin-bottom:22px;
+}
+
+.thank-divider{
+    width:100px;
+    height:2px;
+    background:#d4af37;
+    margin:40px auto;
+}
+
+.signature{
+    font-size:1.2rem;
+}
+
+.closing{
+    color:#d4af37;
+    margin-top:40px;
+    letter-spacing:2px;
+}
+
+.scripture{
+    margin-top:35px;
+    font-style:italic;
+    color:#bdbdbd;
+}
