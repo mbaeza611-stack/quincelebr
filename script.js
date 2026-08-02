@@ -1,25 +1,20 @@
-/* -----------------------------------
-   Destinee Kayleen XV
-   The Black Ball
------------------------------------*/
+/*=========================================
+    THE BLACK BALL
+    DESTINEE KAYLEEN
+==========================================*/
 
-// Loading Screen
-window.addEventListener("load", () => {
-
-    const loader = document.getElementById("loader");
-
-    setTimeout(() => {
-        loader.style.opacity = "0";
-        loader.style.visibility = "hidden";
-    }, 2200);
-
-});
-
-// Countdown Timer
+/*=========================================
+    COUNTDOWN
+==========================================*/
 
 const eventDate = new Date("September 18, 2026 17:30:00").getTime();
 
-const timer = setInterval(() => {
+const days = document.getElementById("days");
+const hours = document.getElementById("hours");
+const minutes = document.getElementById("minutes");
+const seconds = document.getElementById("seconds");
+
+function updateCountdown() {
 
     const now = new Date().getTime();
 
@@ -27,52 +22,113 @@ const timer = setInterval(() => {
 
     if (distance <= 0) {
 
-        clearInterval(timer);
-
-        document.getElementById("days").innerHTML = "00";
-        document.getElementById("hours").innerHTML = "00";
-        document.getElementById("minutes").innerHTML = "00";
-        document.getElementById("seconds").innerHTML = "00";
+        days.textContent = "00";
+        hours.textContent = "00";
+        minutes.textContent = "00";
+        seconds.textContent = "00";
 
         return;
 
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    days.textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        /
+    hours.textContent = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
         (1000 * 60 * 60)
     );
 
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        /
+    minutes.textContent = Math.floor(
+        (distance % (1000 * 60 * 60)) /
         (1000 * 60)
     );
 
-    const seconds = Math.floor(
-        (distance % (1000 * 60))
-        /
+    seconds.textContent = Math.floor(
+        (distance % (1000 * 60)) /
         1000
     );
 
-    document.getElementById("days").innerHTML =
-        String(days).padStart(2, "0");
+}
 
-    document.getElementById("hours").innerHTML =
-        String(hours).padStart(2, "0");
+updateCountdown();
 
-    document.getElementById("minutes").innerHTML =
-        String(minutes).padStart(2, "0");
+setInterval(updateCountdown,1000);
 
-    document.getElementById("seconds").innerHTML =
-        String(seconds).padStart(2, "0");
+/*=========================================
+    STICKY NAVBAR
+==========================================*/
 
-}, 1000);
+const navbar = document.querySelector(".navbar");
 
-// Fade-In Animation
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>50){
+
+        navbar.style.background="rgba(5,5,5,.95)";
+
+    }else{
+
+        navbar.style.background="rgba(5,5,5,.88)";
+
+    }
+
+});
+
+/*=========================================
+    SMOOTH SCROLL
+==========================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+    anchor.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const target=document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+/*=========================================
+    FAQ ACCORDION
+==========================================*/
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const answer = item.querySelector("p");
+
+    answer.style.display = "none";
+
+    item.addEventListener("click", () => {
+
+        const open = answer.style.display === "block";
+
+        document.querySelectorAll(".faq-item p").forEach(p => {
+            p.style.display = "none";
+        });
+
+        if (!open) {
+            answer.style.display = "block";
+        }
+
+    });
+
+});
+
+/*=========================================
+    FADE IN ANIMATION
+==========================================*/
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -87,7 +143,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 
 }, {
+
     threshold: 0.15
+
 });
 
 document.querySelectorAll("section").forEach(section => {
@@ -98,37 +156,98 @@ document.querySelectorAll("section").forEach(section => {
 
 });
 
-// Navigation Background Change
+/*=========================================
+    ACTIVE NAVIGATION LINK
+==========================================*/
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
 
 window.addEventListener("scroll", () => {
 
-    const nav = document.querySelector("nav");
+    let current = "";
 
-    if (window.scrollY > 100) {
+    sections.forEach(section => {
 
-        nav.style.background = "rgba(0,0,0,.85)";
+        const sectionTop = section.offsetTop - 150;
+
+        if (pageYOffset >= sectionTop) {
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+/*=========================================
+    FLOATING RSVP BUTTON
+==========================================*/
+
+const floatingBtn = document.querySelector(".floating-rsvp");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+
+        floatingBtn.style.opacity = "1";
+        floatingBtn.style.pointerEvents = "auto";
 
     } else {
 
-        nav.style.background = "rgba(0,0,0,.45)";
+        floatingBtn.style.opacity = "0";
+        floatingBtn.style.pointerEvents = "none";
 
     }
 
 });
 
-// Smooth Button Scroll
+/*=========================================
+    MOBILE MENU
+==========================================*/
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+const menuButton = document.createElement("button");
 
-    anchor.addEventListener("click", function (e) {
+menuButton.innerHTML = "☰";
 
-        e.preventDefault();
+menuButton.classList.add("menu-toggle");
 
-        document.querySelector(this.getAttribute("href"))
-            .scrollIntoView({
-                behavior: "smooth"
-            });
+document.querySelector(".navbar").appendChild(menuButton);
+
+const nav = document.querySelector("nav");
+
+menuButton.addEventListener("click", () => {
+
+    nav.classList.toggle("open");
+
+});
+
+/*=========================================
+    CLOSE MOBILE MENU AFTER CLICK
+==========================================*/
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("open");
 
     });
 
+});
+
+console.log("The Black Ball Version 2.0 Loaded");
 });
