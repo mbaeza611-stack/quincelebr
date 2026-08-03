@@ -1061,3 +1061,46 @@ footer{
     background:var(--gold);
     color:#111;
 }
+.timeline-section{
+    padding:100px 10%;
+    background:#111;
+}
+
+.timeline-card{
+    max-width:700px;
+    margin:50px auto 0;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:20px;
+    padding:40px;
+}
+
+.timeline-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.timeline-row:last-child{
+    border-bottom:none;
+}
+
+.timeline-time{
+    color:var(--gold);
+    font-family:'Cinzel',serif;
+    font-size:1.1rem;
+}
+
+.timeline-event{
+    color:#fff;
+    font-size:1rem;
+}
+
+.arrival-note{
+    margin-top:35px;
+    text-align:center;
+    color:#ddd;
+    line-height:1.8;
+}
