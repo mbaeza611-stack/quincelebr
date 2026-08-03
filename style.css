@@ -1098,6 +1098,19 @@ footer{
     opacity:.9;
 
 }
+footer h3{
+
+    font-family:'Cinzel', serif;
+
+    font-size:3.4rem;
+
+    letter-spacing:8px;
+
+    color:#fff;
+
+    margin-bottom:12px;
+
+}
 /*==================================================
     FLOATING RSVP
 ===================================================*/
