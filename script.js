@@ -193,26 +193,6 @@ window.addEventListener("scroll", () => {
 
 });
 
-/*=========================================
-    FLOATING RSVP BUTTON
-==========================================*/
 
-const floatingBtn = document.querySelector(".floating-rsvp");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 500) {
-
-        floatingBtn.style.opacity = "1";
-        floatingBtn.style.pointerEvents = "auto";
-
-    } else {
-
-        floatingBtn.style.opacity = "0";
-        floatingBtn.style.pointerEvents = "none";
-
-    }
-
-});
 
 
