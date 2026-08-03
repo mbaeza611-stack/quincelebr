@@ -1195,9 +1195,9 @@ footer h3{
         font-size:1.8rem;
     }
 
-    nav{
-        display:none;
-    }
+   nav{
+    display:block;
+}
 
     section{
         padding:90px 7%;
