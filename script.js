@@ -215,39 +215,4 @@ window.addEventListener("scroll", () => {
 
 });
 
-/*=========================================
-    MOBILE MENU
-==========================================*/
 
-const menuButton = document.createElement("button");
-
-menuButton.innerHTML = "☰";
-
-menuButton.classList.add("menu-toggle");
-
-document.querySelector(".navbar").appendChild(menuButton);
-
-const nav = document.querySelector("nav");
-
-menuButton.addEventListener("click", () => {
-
-    nav.classList.toggle("open");
-
-});
-
-/*=========================================
-    CLOSE MOBILE MENU AFTER CLICK
-==========================================*/
-
-document.querySelectorAll("nav a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        nav.classList.remove("open");
-
-    });
-
-});
-
-console.log("The Black Ball Version 2.0 Loaded");
-});
