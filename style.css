@@ -1520,3 +1520,91 @@ footer h3{
 }
 
 }
+/*=========================================
+    DRESS CODE
+=========================================*/
+
+#dress-code{
+    padding:120px 10%;
+    background:#0b0b0b;
+}
+
+#dress-code .section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+#dress-code .section-title span{
+    color:var(--gold);
+    letter-spacing:6px;
+    text-transform:uppercase;
+    font-size:.85rem;
+}
+
+#dress-code .section-title h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    color:#fff;
+    margin-top:18px;
+}
+
+.dress-card{
+    max-width:900px;
+    margin:0 auto;
+    background:#141414;
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:28px;
+    padding:60px;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+.dress-card h3{
+    font-family:'Cinzel',serif;
+    color:var(--gold);
+    font-size:1.35rem;
+    margin-bottom:15px;
+}
+
+.dress-card p{
+    color:#ddd;
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+.dress-card strong{
+    color:#fff;
+}
+
+.dress-divider{
+    width:100%;
+    height:1px;
+    background:rgba(212,175,55,.18);
+    margin:35px 0;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    #dress-code{
+        padding:90px 7%;
+    }
+
+    #dress-code .section-title h2{
+        font-size:2.2rem;
+    }
+
+    .dress-card{
+        padding:35px 28px;
+        border-radius:22px;
+    }
+
+    .dress-card h3{
+        font-size:1.15rem;
+    }
+
+    .dress-card p{
+        font-size:1rem;
+    }
+
+}
