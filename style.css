@@ -1608,3 +1608,64 @@ footer h3{
     }
 
 }
+/*=========================================
+    MOBILE NAVIGATION
+=========================================*/
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:var(--gold);
+    font-size:2rem;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+        position:absolute;
+        right:25px;
+        top:22px;
+        z-index:1001;
+    }
+
+  .main-nav{
+    width:100%;
+}
+
+    .nav-links{
+
+        display:none;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+
+        position:absolute;
+        top:80px;
+        left:0;
+
+        width:100%;
+
+        background:#090909;
+
+        padding:35px 0;
+
+        border-top:1px solid rgba(212,175,55,.25);
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+    .nav-links li{
+
+        list-style:none;
+
+    }
+
+}
