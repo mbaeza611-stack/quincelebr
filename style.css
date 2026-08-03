@@ -1087,7 +1087,17 @@ footer{
     color:#777;
     border-top:1px solid rgba(212,175,55,.15);
 }
+.footer-crown{
 
+    font-size:2rem;
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+    opacity:.9;
+
+}
 /*==================================================
     FLOATING RSVP
 ===================================================*/
