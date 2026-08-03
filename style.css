@@ -174,14 +174,10 @@ section{
 
 }
 
-nav ul{
-
+.main-nav .nav-links{
     display:flex;
-
-   gap:22px;
-
+    gap:22px;
     align-items:center;
-
 }
 
 nav a{
@@ -742,8 +738,52 @@ blockquote{
         text-align:center;
 
         align-items:center;
+     }    
 
-    }
+    .menu-toggle{
+    display:block;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:2rem;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.main-nav{
+    position:relative;
+}
+
+.main-nav .nav-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#111;
+    padding:20px 0;
+    text-align:center;
+    gap:20px;
+    z-index:1000;
+}
+
+.main-nav .nav-links.active{
+    display:flex;
+}
+
+.nav-links.active{
+    display:flex;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    display:block;
+    padding:12px 0;
+}
 
     .journey-text h3{
 
