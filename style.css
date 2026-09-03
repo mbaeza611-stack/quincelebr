@@ -1709,3 +1709,119 @@ footer h3{
     }
 
 }
+/* =========================================
+   SEATING CHART
+========================================= */
+
+#seating {
+    padding: 100px 8%;
+    text-align: center;
+    background: #050505;
+    min-height: 600px;
+}
+
+#seating .section-title {
+    margin-bottom: 60px;
+}
+
+#seating .section-title h2 {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    color: #f5f5f5;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#seating .section-title p {
+    color: #c9a227;
+    font-size: 1.05rem;
+}
+
+.seating-search {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid rgba(201, 162, 39, 0.45);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.seating-search h3 {
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.seating-search p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+#guest-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    margin-bottom: 15px;
+    background: #111;
+    border: 1px solid #555;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+#guest-search:focus {
+    border-color: #c9a227;
+}
+
+#guest-search::placeholder {
+    color: #777;
+}
+
+#search-seat {
+    padding: 13px 28px;
+    background: transparent;
+    border: 1px solid #c9a227;
+    color: #c9a227;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#search-seat:hover {
+    background: #c9a227;
+    color: #000;
+}
+
+#seating-result {
+    max-width: 600px;
+    margin: 30px auto 0;
+    color: #fff;
+    font-size: 1.15rem;
+}
+
+#seating-result strong {
+    color: #c9a227;
+}
+
+
+/* Mobile */
+@media(max-width:600px) {
+
+    #seating {
+        padding: 80px 20px;
+    }
+
+    #seating .section-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .seating-search {
+        padding: 30px 20px;
+    }
+
+    #search-seat {
+        width: 100%;
+    }
+}
